@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back" />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="logo" />
+    </header>
+
+    <!-- Header end -->
+
+    <section class="generator">
+      <div class="welcomemessage">
+        <h1>Your Journey to Coding Conf 2025 Starts Here! </h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </div>
+      <!-- Form starts -->
+      <form class="formm">
+        <div class="upload-section">
+          <p class="upload-label">Upload Avatar</p>
+          <div class="upload-avatar">
+            <label for="avatarInput" class="upload-box">
+              <span class="upload-icon">📤</span>
+              <p>Drag and drop or click to upload</p>
+            </label>
+            <input
+              type="file"
+              id="avatarInput"
+              name="avatarInput"
+              accept="image/*"
+              required />
+          </div>
+          <p id="photoError" class="error-message"></p>
+          <small> Upload your photo (JPG or PNG, max size: 500KB).</small>
+        </div>
+
+        <div class="input-container">
+          <label class="labname" for="fullName">Full Name</label>
+          <input
+            type="text"
+            name="fullname"
+            id="fullName"
+            placeholder="firstname lastname" />
+          <p id="fullnameError" class="error-message"></p>
+        </div>
+
+        <div class="input-container">
+          <label class="labname" for="email">Email Address</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="example@email.com" />
+          <p id="emailError" class="error-message"></p>
+        </div>
+
+        <div class="input-container">
+          <label class="labname" for="github">GitHub Username</label>
+          <input
+            type="text"
+            name="github"
+            id="github"
+            placeholder="BIGFOOT-DEV" />
+          <p id="githubError" class="error-message"></p>
+        </div>
+
+        <button type="submit" class="btn"> Generate My Ticket </button>
+      </form>
+      <!-- Form ends -->
+    </section>
+
+    <!-- Generated tickets starts -->
+    <section class="ticket">
+      <div class="ticket-headline">
+        <h1 class="congrats">
+          Congrats,<span class="congrats-name"></span> <br class="brk" />
+          Your ticket is ready
+        </h1>
+        <p class="email-notification-text"
+          >We've emailed your ticket to <span class="email-text"></span> and
+          will send updates in therun up to the event.
+        </p>
+      </div>
+
+      <div class="actual-ticket">
+        <div class="column-1">
+          <div class="ticket-constant">
+            <img src="./assets/images/logo-mark.svg" alt="logo" />
+            <div>
+              <h2>coding conf</h2>
+              <p>Jan 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+          <div class="ticket-info">
+            <img src="" class="avatar" />
+            <div class="ticket-vitals">
+              <h2 class="ticket-name"></h2>
+              <div class="github-info">
+                <img src="./assets/images/icon-github.svg" />
+                <p class="git-username"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-2">
+          <p class="ticket-id">#<span class="ticket-pri"></span></p>
+        </div>
+      </div>
+      <button class="back" id="refreshButton">
+        <span class="material-symbols-outlined"> arrow_back </span>
+      </button>
+    </section>
+    <!-- Generated tickets ends -->
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/BIGFOOT-DEV" target="_blank"> BIGFOOT-DEV</a
+        >.
+      </p>
+    </footer>
+    <!-- <script src="./public/app.js"></script> -->
+    <script src="./public/app.js"></script>
+  </body>
+</html>

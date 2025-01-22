@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+  font-size: 62.5%;
+  font-family: "Inconsolata", serif;
+  --neutral-color: hsl(0, 0%, 100%);
+  --neutral-color2: hsl(252, 6%, 83%);
+  --neutral-color3: hsl(245, 15%, 58%);
+  --neutral-color4: hsl(245, 19%, 35%);
+  --neutral-color5: hsl(248, 70%, 10%);
+  --orange-color:  hsl(7, 88%, 67%);
+  --orange-color2:  hsl(7, 71%, 60%);
+  --gredient-color: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  margin: 0;
+  padding: 0;
+  color: var(--neutral-color);
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/background-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--neutral-color5);
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generator{
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcomemessage h1{
+  font-size: 3.7rem;
+  text-align: center;
+}
+
+.welcomemessage p{
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--neutral-color3);
+}
+
+form{
+  width: 100%;
+  height: 60vh;
+}
+
+.labname{
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--neutral-color2);
+}
+
+.upload-section{
+  margin-bottom: 10px;
+}
+
+.upload-avatar {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #777;
+  border-radius: 8px;
+  background: #2e2e4f;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  background: #3a3a5e;
+}
+
+.upload-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.upload-avatar input[type="file"] {
+  display: none;
+}
+.upload-avatar p{
+  font-size: 1.2rem;
+  color: var(--neutral-color2);
+}
+
+.upload-section small{
+  font-size: 1.2rem;
+  color: var(--neutral-color2);
+}
+
+.upload-label{
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--neutral-color2);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.input-container input{
+  height: 25px;
+  padding:  5px 10px;
+  border-radius: 8px;
+  background: #2e2e4f;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+  outline: none;
+}
+
+.input-container input::placeholder{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--neutral-color2);
+  transition: background-color 5000s ease-in-out 0s #2e2e4f;
+  box-shadow: inset 0 0 20px 20px #2e2e4f;
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange-color2);
+  border-radius: 8px;
+  height: 25px;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn{
+  width: 100%;
+  background-color: var(--orange-color2);
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+  font-size: 2.0rem;
+  text-align: center;
+  font-weight: 800;
+  color: var(--neutral-color5);
+  cursor: pointer;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+}
+
+/* Ticket */
+.ticket{
+  width: 500px;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.ticket-headline{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.congrats{
+  font-size: 3.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.congrats-name{
+font-size: 3.7rem;
+text-align: center;
+font-weight: 600;
+background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.email-notification-text{
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--neutral-color2);
+}
+
+.email-text{
+font-size: 1.6rem;
+color: var(--orange-color);
+font-weight: 600;
+}
+
+
+.actual-ticket{
+  height: 200px;
+  width: 100%;
+  background-color: var(--neutral-color4);
+  border-radius: 10px;
+  border: 1px solid var(--orange-color);
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.column-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.ticket-constant{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ticket-constant h2{
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  color: var(--neutral-color);
+}
+
+.ticket-constant p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+.ticket-info{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  border: 2px solid #ff6b6b;
+  object-fit: cover;
+}
+
+.ticket-vitals{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ticket-name{
+  font-size: 2.0rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  color: var(--neutral-color);
+}
+
+.github-info{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.git-username{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+.column-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px dashed var(--neutral-color2);
+  border-radius: 50%;
+}
+
+.ticket-id{
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+.ticket-pri{
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+.back{
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 50px;
+}
+
+
+/* Ticket end */
+
+/* footer */
+.attribution{
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution p{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--neutral-color2);
+}
+
+.attribution a{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--orange-color);
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+/* footer end */
+
+/* Media Qurey */
+@media (max-width: 575.98px) {
+
+.generator{
+  width: 300px;
+}
+
+.welcomemessage h1{
+    font-size: 2.5rem;
+}
+
+form{
+    height: max-content;
+}
+
+/* Ticket */
+.ticket{
+  width: 300px;
+  padding: 20px 0;
+}
+
+.congrats{
+  font-size: 2.5rem;
+}
+
+.brk{
+  display: none;
+}
+
+.congrats-name{
+font-size: 2.5rem;
+}
+
+.actual-ticket{
+  height: 150px;
+  grid-template-columns: 80% 20%;
+}
+
+.column-1{
+  padding: 0 10px;
+}
+
+.ticket-constant img{
+  width: 30px;
+}
+
+.ticket-constant h2{
+  font-size: 2.0rem;
+}
+
+.ticket-constant p{
+  font-size: 1.2rem;
+}
+
+.ticket-info{
+  gap: 5px;
+}
+
+.ticket-vitals{
+  gap: 5px;
+}
+
+.ticket-name{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.ticket-id{
+  font-size: 1.0rem;
+  font-weight: 600;
+}
+
+.ticket-pri{
+  font-size: 1.0rem;
+  font-weight: 600;
+}
+/* Ticket end */
+
+/* footer */
+.attribution{
+  width: 100%;
+  height: 50px;
+}
+
+.attribution p{
+  width: 80%;
+  text-align: center;
+}
+/* footer end */
+}
