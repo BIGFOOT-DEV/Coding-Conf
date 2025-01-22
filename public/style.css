@@ -217,8 +217,9 @@ font-size: 3.7rem;
 text-align: center;
 font-weight: 600;
 background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+background-clip: border-box;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
 }
 
 .email-notification-text{
